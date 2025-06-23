@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        OpenAccount();
         //TODO: Conhecer e importar a classe Scanner
 
         //Exibir as mensagens para o nosso usuário
@@ -12,15 +12,20 @@ public class ContaTerminal {
         //Exibir a mensagem conta criada
     }
 
-    public static void Teste() {
+    public static void OpenAccount() {
         var scanner = new Scanner(System.in);
 
-        System.out.println("Por favor, digite o número da Agência:");
-        var numberAgence = scanner.nextInt();
-        System.out.println("Por favor, digite o número da Conta:");
+        System.out.println("Por favor, digite a Agência do cliente:");
+        var agence = scanner.next();
+        System.out.println("Por favor, digite o número da Conta do cliente:");
         var number = scanner.nextInt();
-        System.out.println("Por favor, informe o nome do clinte:");
+        System.out.println("Por favor, digite o nome do clinte:");
         var nameClient = scanner.next();
+        System.out.println("Por favor, digite qual é o saldo atual do cliente:");
+        var balance = scanner.nextDouble();
+        
+        System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %s e seu saldo %s " +
+                " já está disponível para saque. ",nameClient, agence, number, balance);
 
     }
 
