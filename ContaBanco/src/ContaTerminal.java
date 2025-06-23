@@ -19,11 +19,12 @@ public class ContaTerminal {
         var agence = scanner.next();
         System.out.println("Por favor, digite o número da Conta do cliente:");
         var number = scanner.nextInt();
+        scanner.nextLine(); // limpar a quebra de linha pendente
         System.out.println("Por favor, digite o nome do clinte:");
-        var nameClient = scanner.next();
+        var nameClient = scanner.nextLine();
         System.out.println("Por favor, digite qual é o saldo atual do cliente:");
         var balance = scanner.nextDouble();
-        
+
         System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %s e seu saldo %s " +
                 " já está disponível para saque. ",nameClient, agence, number, balance);
 
